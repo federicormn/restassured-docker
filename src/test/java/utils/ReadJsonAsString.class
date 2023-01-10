@@ -1,0 +1,18 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class ReadJsonAsString
+{
+    public static void main(String[] args) throws Exception
+    {
+        String file = "rest-assured-federoman\src\test\java\body.json";
+        String json = readFileAsString(file);
+        System.out.println(json);
+        
+    }
+
+    public static String readFileAsString(String file) throws Exception
+    {
+        return new String(Files.readAllBytes(Paths.get(file)));
+    }
+}
